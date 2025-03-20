@@ -163,7 +163,7 @@ const Contact = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-ieee p-6">
-              <h3 className="text-2xl font-bold text-ieee-dark mb-4">Connect With Us</h3>
+              {/* <h3 className="text-2xl font-bold text-ieee-dark mb-4">Connect With Us</h3>
               <div className="flex space-x-4">
                 <a href="#" className="bg-ieee-light p-3 rounded-full text-ieee-blue hover:bg-ieee-blue hover:text-white transition-colors duration-300">
                   <FaLinkedin className="text-xl" />
@@ -177,7 +177,7 @@ const Contact = () => {
                 <a href="#" className="bg-ieee-light p-3 rounded-full text-ieee-blue hover:bg-ieee-blue hover:text-white transition-colors duration-300">
                   <FaInstagram className="text-xl" />
                 </a>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>
