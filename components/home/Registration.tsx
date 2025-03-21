@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 
-const googleFormLink = "https://forms.gle/YOUR_GOOGLE_FORM_LINK"; // Replace with actual Google Form link
+const googleFormLink =
+  "https://docs.google.com/forms/d/e/1FAIpQLScqsU9CVVkFY5Q7HRoLM3G2ekG8P9CcN4kGCPmgWE2iVKIe5g/viewform?usp=dialog";
 
 export default function Registration() {
   return (
