@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ieee-blue: #00629B;
+  --ieee-dark-grey: #333333;
+  --ieee-white: #FFFFFF;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Adjust based on navbar height */
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 font-bold bg-ieeeBlue text-white rounded hover:bg-ieeeNavy 
+    transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 
+    focus:ring-ieeeBlue focus:ring-opacity-50;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 font-bold border-2 border-ieeeBlue text-ieeeBlue rounded 
+    hover:bg-ieeeBlue hover:text-white transition-all duration-300 ease-in-out 
+    focus:outline-none focus:ring-2 focus:ring-ieeeBlue focus:ring-opacity-50;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-ieeeBlue mb-6 text-center;
+  }
+  
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 py-16 md:py-24;
+  }
+}
