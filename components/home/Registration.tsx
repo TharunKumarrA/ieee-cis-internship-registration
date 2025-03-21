@@ -1,136 +1,79 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import { FaClock, FaMoneyBillWave, FaUserGraduate } from 'react-icons/fa';
+import { motion } from "framer-motion";
 
-const Registration = () => {
-  const [email, setEmail] = useState('');
-  
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would integrate with your actual registration system
-    alert(`Thank you! We'll send registration details to ${email}`);
-    setEmail('');
-  };
+const googleFormLink =
+  "https://docs.google.com/forms/d/e/1FAIpQLScqsU9CVVkFY5Q7HRoLM3G2ekG8P9CcN4kGCPmgWE2iVKIe5g/viewform?usp=dialog";
 
+export default function Registration() {
   return (
-    <section id="registration" className="py-16 bg-white">
-      <div className="container mx-auto px-4">
+    <section
+      id="registration"
+      className="relative py-20 bg-gradient-to-r from-ieeeBlue to-ieeeNavy"
+    >
+      {/* Background Tech Pattern */}
+      <div className="absolute inset-0 bg-[url('/images/tech-pattern.png')] bg-cover opacity-10 z-0"></div>
+
+      <div className="container mx-auto px-6 relative z-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="max-w-3xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-ieee-blue mb-2">Registration & Fees</h2>
-          <div className="w-24 h-1 bg-ieee-blue mx-auto mb-4"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Secure your spot in this prestigious internship program by completing the registration process.
+          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
+            Register Now for the IEEE CIS Summer Internship 2025
+          </h2>
+
+          <p className="text-lg md:text-xl text-gray-200 mb-8">
+            Take the first step towards an exciting journey in Computational
+            Intelligence. Secure your spot now!
           </p>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+          >
+            <a
+              href={googleFormLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-white text-ieeeBlue font-bold py-4 px-8 rounded-lg text-lg shadow-md hover:bg-gray-200 transition"
+            >
+              Register Now
+            </a>
+          </motion.div>
+
+          <motion.div
+            className="mt-8 p-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-lg inline-block"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.8, duration: 0.5 }}
+          >
+            <div className="flex items-center space-x-2 text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <span>
+                Registration Closes: <strong>April 30, 2025</strong>
+              </span>
+            </div>
+          </motion.div>
         </motion.div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <div className="bg-ieee-light rounded-lg p-6 shadow-ieee border-l-4 border-ieee-blue mb-6">
-              <h3 className="text-2xl font-bold text-ieee-dark mb-4">Registration Details</h3>
-              
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 mt-1 text-ieee-blue">
-                    <FaMoneyBillWave size={20} />
-                  </div>
-                  <div className="ml-4">
-                    <h4 className="font-bold text-ieee-dark">Registration Fee</h4>
-                    <p className="text-gray-600">₹1000 (Includes course materials, certification, and project mentorship)</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 mt-1 text-ieee-blue">
-                    <FaClock size={20} />
-                  </div>
-                  <div className="ml-4">
-                    <h4 className="font-bold text-ieee-dark">Registration Deadline</h4>
-                    <p className="text-gray-600">May 10, 2025 (11:59 PM IST)</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 mt-1 text-ieee-blue">
-                    <FaUserGraduate size={20} />
-                  </div>
-                  <div className="ml-4">
-                    <h4 className="font-bold text-ieee-dark">Required Documents</h4>
-                    <p className="text-gray-600">Resume/CV, Academic transcripts, Statement of purpose (300 words)</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg p-6 shadow-ieee border border-ieee-blue/20">
-              <h4 className="font-bold text-ieee-dark mb-2">IEEE Member Benefit</h4>
-              <p className="text-gray-600 mb-4">IEEE members receive a 20% discount on the registration fee. Valid IEEE membership ID required during registration.</p>
-              
-              <div className="bg-ieee-light p-3 rounded-md border border-ieee-blue/20">
-                <p className="text-sm font-medium text-ieee-dark">Not an IEEE member yet? <a href="https://www.ieee.org/membership/join/index.html" target="_blank" rel="noopener noreferrer" className="text-ieee-blue hover:underline">Join now</a> to access this and many other benefits.</p>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <div className="bg-white rounded-lg p-6 shadow-ieee border border-ieee-blue/20">
-              <h3 className="text-2xl font-bold text-ieee-dark mb-6">Register Now</h3>
-              
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-ieee-blue focus:border-transparent"
-                    placeholder="your.email@example.com"
-                    required
-                  />
-                </div>
-                
-                <button 
-                  type="submit" 
-                  className="w-full bg-ieee-blue hover:bg-ieee-blue/90 text-white font-bold py-3 px-6 rounded-md transition-colors duration-300 shadow-sm"
-                >
-                  Get Registration Details
-                </button>
-                
-                <p className="text-sm text-gray-500 mt-4">
-                  By registering, you agree to our terms and conditions and privacy policy.
-                </p>
-              </form>
-              
-              <div className="mt-6 pt-6 border-t border-gray-200">
-                <p className="text-sm text-gray-600">
-                  For assistance with registration, please contact: <br />
-                  <a href="mailto:internship@ciskerala.org" className="text-ieee-blue hover:underline">internship@ciskerala.org</a>
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
       </div>
     </section>
   );
-};
-
-export default Registration;
+}
