@@ -77,7 +77,7 @@ export default function About() {
           
           <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg">
             <Image
-              src="/images/internship-overview.jpg"
+              src="/images/image.png"
               alt="Students working on computational intelligence projects"
               fill
               className="object-cover"

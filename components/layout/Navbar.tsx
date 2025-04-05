@@ -88,7 +88,9 @@ export default function Navbar() {
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${
                     activeSection === item.href
                       ? "text-white bg-ieeeBlue"
-                      : "text-ieeeDarkGrey hover:bg-ieeeGray"
+                      : scrolled
+                      ? "text-ieeeDarkGrey hover:bg-ieeeGray"
+                      : "text-white hover:bg-ieeeLightBlue"
                   }`}
                 >
                   {item.name}
@@ -161,7 +163,9 @@ export default function Navbar() {
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   activeSection === item.href
                     ? "text-white bg-ieeeBlue"
-                    : "text-ieeeDarkGrey hover:bg-ieeeGray"
+                    : scrolled
+                    ? "text-ieeeDarkGrey hover:bg-ieeeGray"
+                    : "text-white hover:bg-ieeeLightBlue"
                 }`}
                 onClick={() => setIsOpen(false)}
               >
