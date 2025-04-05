@@ -46,6 +46,7 @@ export default function Registration() {
             </a>
           </motion.div>
 
+          {/* Registration Deadline */}
           <motion.div
             className="mt-8 p-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-lg inline-block"
             initial={{ opacity: 0 }}
@@ -71,6 +72,17 @@ export default function Registration() {
                 Registration Closes: <strong>April 30, 2025</strong>
               </span>
             </div>
+          </motion.div>
+
+          {/* Note About Fees */}
+          <motion.div
+            className="mt-4 text-sm text-gray-200 bg-white bg-opacity-10 backdrop-blur-sm px-4 py-2 rounded-lg inline-block"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 1.1, duration: 0.5 }}
+          >
+            💡 Fees are applicable, but payment is only required after the
+            shortlisting of candidates.
           </motion.div>
         </motion.div>
       </div>
