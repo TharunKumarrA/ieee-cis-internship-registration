@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -15,20 +15,38 @@ export default function Footer() {
               className="mb-4"
             />
             <p className="mt-4 text-sm text-ieeeGray">
-              IEEE Computational Intelligence Society Kerala Section is dedicated to advancing technology through education and innovation.
+              IEEE Computational Intelligence Society Kerala Section is
+              dedicated to advancing technology through education and
+              innovation.
             </p>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link href="#home" className="hover:underline">Home</Link></li>
-              <li><Link href="#about" className="hover:underline">About</Link></li>
-              <li><Link href="#eligibility" className="hover:underline">Eligibility</Link></li>
-              <li><Link href="#registration" className="hover:underline">Registration</Link></li>
+              <li>
+                <Link href="#home" className="hover:underline">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="#about" className="hover:underline">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="#eligibility" className="hover:underline">
+                  Eligibility
+                </Link>
+              </li>
+              <li>
+                <Link href="#registration" className="hover:underline">
+                  Registration
+                </Link>
+              </li>
             </ul>
           </div>
-          
+
           <div>
             {/* <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
             <div className="flex space-x-4">
@@ -51,16 +69,14 @@ export default function Footer() {
                 </svg>
               </a>
             </div> */}
-            <div className="mt-6">
+            {/* <div className="mt-6">
               <p className="text-sm">Email: <a href="mailto:contact@ciskerala.org" className="hover:underline">contact@ciskerala.org</a></p>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="mt-8 border-t border-ieeeNavy pt-8 flex flex-col md:flex-row justify-between">
-          <p className="text-sm">© 2025 IEEE CIS Kerala Section. All rights reserved.</p>
-          <p className="text-sm mt-2 md:mt-0">
-            <Link href="/privacy-policy" className="hover:underline">Privacy Policy</Link> | 
-            <Link href="/terms-of-service" className="hover:underline ml-2">Terms of Service</Link>
+          <p className="text-sm">
+            © 2025 IEEE CIS Kerala Section. All rights reserved.
           </p>
         </div>
       </div>
