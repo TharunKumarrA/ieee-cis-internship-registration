@@ -15,7 +15,8 @@ export default function Home() {
       <Eligibility />
       <Schedule />
       <Registration />
-      <div className="h-20 "></div>
+      <Contact />
+      {/* <div className="h-20 "></div> */}
     </>
   );
 }
