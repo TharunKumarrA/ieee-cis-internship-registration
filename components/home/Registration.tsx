@@ -2,9 +2,6 @@
 
 import { motion } from "framer-motion";
 
-const googleFormLink =
-  "https://docs.google.com/forms/d/e/1FAIpQLScqsU9CVVkFY5Q7HRoLM3G2ekG8P9CcN4kGCPmgWE2iVKIe5g/viewform?usp=dialog";
-
 export default function Registration() {
   return (
     <section
@@ -23,12 +20,12 @@ export default function Registration() {
           className="max-w-3xl mx-auto"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
-            Register Now for the IEEE CIS Summer Internship 2025
+            Registrations Closed
           </h2>
 
           <p className="text-lg md:text-xl text-gray-200 mb-8">
-            Take the first step towards an exciting journey in Computational
-            Intelligence. Secure your spot now!
+            Thank you for your interest in the IEEE CIS Summer Internship 2025.
+            Registrations are now closed.
           </p>
 
           <motion.div
@@ -36,14 +33,12 @@ export default function Registration() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.5 }}
           >
-            <a
-              href={googleFormLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-white text-ieeeBlue font-bold py-4 px-8 rounded-lg text-lg shadow-md hover:bg-gray-200 transition"
+            <button
+              disabled
+              className="inline-block bg-gray-300 text-gray-500 font-bold py-4 px-8 rounded-lg text-lg cursor-not-allowed"
             >
-              Register Now
-            </a>
+              Registration Closed
+            </button>
           </motion.div>
 
           {/* Registration Deadline */}
@@ -69,20 +64,9 @@ export default function Registration() {
                 />
               </svg>
               <span>
-                Registration Closes: <strong>April 30, 2025</strong>
+                Registration Closed on: <strong>April 30, 2025</strong>
               </span>
             </div>
-          </motion.div>
-
-          {/* Note About Fees */}
-          <motion.div
-            className="mt-4 text-sm text-gray-200 bg-white bg-opacity-10 backdrop-blur-sm px-4 py-2 rounded-lg inline-block"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 1.1, duration: 0.5 }}
-          >
-            💡 Fees are applicable, but payment is only required after the
-            shortlisting of candidates.
           </motion.div>
         </motion.div>
       </div>
