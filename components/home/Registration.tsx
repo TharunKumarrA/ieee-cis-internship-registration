@@ -28,6 +28,19 @@ export default function Registration() {
             Registrations are now closed.
           </p>
 
+          {/* Shortlisting message */}
+          <motion.p
+            className="text-md md:text-lg text-white bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg mb-8"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+          >
+            <strong>Shortlisting in Progress:</strong> Due to the overwhelming
+            number of applications, we are currently reviewing submissions. The
+            shortlisted list will be posted on the website soon. Thank you for
+            your patience!
+          </motion.p>
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
