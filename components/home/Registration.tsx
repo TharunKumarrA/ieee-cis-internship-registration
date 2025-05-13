@@ -287,7 +287,7 @@ export default function Registration() {
           className="max-w-3xl mx-auto"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
-            Registration Instructions
+            Payment & Confirmation Instructions
           </h2>
 
           <p className="text-lg md:text-xl text-gray-200 mb-8">
@@ -309,18 +309,24 @@ export default function Registration() {
 
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.6, duration: 0.5 }}
+            className="mt-6 max-w-3xl mx-auto"
           >
-            <button
-              disabled
-              className="inline-block bg-gray-300 text-gray-500 font-bold py-4 px-8 rounded-lg text-lg cursor-not-allowed"
+            <p className="text-lg md:text-xl text-gray-200 mb-4">
+              Please use the Google Form below to find the payment details and
+              submit your proof of payment.
+            </p>
+            <a
+              href="https://forms.gle/wzxb8iAYUKk1jfGR7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nline-block bg-white text-ieeeBlue font-bold py-3 px-6 rounded-lg text-lg hover:bg-gray-200 transition-colors shadow-md"
             >
-              Registration Closed
-            </button>
+              Submit Payment Details
+            </a>
           </motion.div>
 
-          {/* Registration Deadline */}
           <motion.div
             className="mt-8 p-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-lg inline-block"
             initial={{ opacity: 0 }}
