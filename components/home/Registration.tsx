@@ -20,25 +20,24 @@ export default function Registration() {
           className="max-w-3xl mx-auto"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
-            Registrations Closed
+            Registration Instructions
           </h2>
 
           <p className="text-lg md:text-xl text-gray-200 mb-8">
-            Thank you for your interest in the IEEE CIS Summer Internship 2025.
-            Registrations are now closed.
+            Congratulations to all selected candidates! Please check your inbox
+            for the registration email. Complete your registration by{" "}
+            <strong>May 16th, 10:00 PM</strong> by submitting the required
+            details and uploading your payment receipt.
           </p>
 
-          {/* Shortlisting message */}
           <motion.p
             className="text-md md:text-lg text-white bg-white bg-opacity-10 backdrop-blur-sm p-4 rounded-lg mb-8"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            <strong>Shortlisting in Progress:</strong> Due to the overwhelming
-            number of applications, we are currently reviewing submissions. The
-            shortlisted list will be posted on the website soon. Thank you for
-            your patience!
+            <strong>Note:</strong> Failure to complete registration before the
+            deadline will result in forfeiting your selection.
           </motion.p>
 
           <motion.div
