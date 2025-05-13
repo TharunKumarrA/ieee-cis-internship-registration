@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { FaCalendarAlt, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
-import Image from 'next/image';
+import { motion } from "framer-motion";
+import { FaCalendarAlt, FaMapMarkerAlt, FaClock } from "react-icons/fa";
+import Image from "next/image";
 
 interface TimelineEventProps {
   date: string;
@@ -12,25 +12,41 @@ interface TimelineEventProps {
   delay: number;
 }
 
-const TimelineEvent = ({ date, title, description, isActive = false, delay }: TimelineEventProps) => {
+const TimelineEvent = ({
+  date,
+  title,
+  description,
+  isActive = false,
+  delay,
+}: TimelineEventProps) => {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: delay * 0.1 }}
       viewport={{ once: true }}
-      className={`flex mb-8 relative ${isActive ? 'opacity-100' : 'opacity-80'}`}
+      className={`flex mb-8 relative ${
+        isActive ? "opacity-100" : "opacity-80"
+      }`}
     >
       <div className="flex-shrink-0 w-24 pt-1 text-right pr-4">
         <span className="text-sm font-bold text-ieee-blue">{date}</span>
       </div>
-      
+
       <div className="flex flex-col items-center mr-4">
-        <div className={`w-3 h-3 rounded-full ${isActive ? 'bg-ieee-blue' : 'bg-gray-400'}`}></div>
+        <div
+          className={`w-3 h-3 rounded-full ${
+            isActive ? "bg-ieee-blue" : "bg-gray-400"
+          }`}
+        ></div>
         <div className="h-full w-0.5 bg-gray-200"></div>
       </div>
-      
-      <div className={`bg-white rounded-lg p-4 shadow-ieee flex-grow ${isActive ? 'border-l-4 border-ieee-blue' : ''}`}>
+
+      <div
+        className={`bg-white rounded-lg p-4 shadow-ieee flex-grow ${
+          isActive ? "border-l-4 border-ieee-blue" : ""
+        }`}
+      >
         <h4 className="text-lg font-bold">{title}</h4>
         <p className="text-gray-600">{description}</p>
       </div>
@@ -43,69 +59,84 @@ const Schedule = () => {
     {
       date: "April 1, 2025",
       title: "Applications Open",
-      description: "Online applications for the summer internship begin through the IEEE portal.",
-      isActive: true
+      description:
+        "Online applications for the summer internship begin through the IEEE portal.",
+      isActive: false,
     },
     {
       date: "April 20, 2025",
       title: "Application Deadline",
-      description: "Last date to submit your application and supporting documents.",
-      isActive: false
+      description:
+        "Last date to submit your application and supporting documents.",
+      isActive: false,
     },
     {
       date: "April 25, 2025",
       title: "Shortlist Announcement",
-      description: "List of shortlisted candidates will be published on the website.",
-      isActive: false
+      description:
+        "List of shortlisted candidates will be published on the website.",
+      isActive: false,
     },
     {
-      date: "May 1, 2025",
+      date: "May 13, 2025",
+      title: "Email Notification to Selected Students",
+      description:
+        "Emails have been sent to selected students with further instructions.",
+      isActive: true,
+    },
+    {
+      date: "May 16, 2025",
       title: "Registration Deadline",
-      description: "Selected candidates must complete registration and fee payment.",
-      isActive: false
+      description:
+        "Selected candidates must pay the registration fee and submit their details by 10:00 PM.",
+      isActive: false,
     },
     {
-      date: "May 15, 2025",
+      date: "May 20, 2025",
       title: "Orientation Program",
-      description: "Virtual kickoff event for all participants with mentor introductions.",
-      isActive: false
+      description:
+        "Introductory session to welcome participants and explain the internship structure.",
+      isActive: false,
     },
     {
-      date: "May 20 - July 30, 2025",
+      date: "May 20 – July 30, 2025",
       title: "Internship Period",
-      description: "10-week intensive program with online sessions and hands-on projects.",
-      isActive: false
+      description:
+        "10-week hands-on internship across various host institutions.",
+      isActive: false,
     },
     {
       date: "August 5, 2025",
       title: "Project Presentations",
-      description: "Final project presentations and evaluations at host institutions.",
-      isActive: false
+      description:
+        "Final presentations and evaluations by mentors and faculty.",
+      isActive: false,
     },
     {
       date: "August 10, 2025",
       title: "Certification & Closing",
-      description: "Distribution of certificates and closing ceremony.",
-      isActive: false
-    }
+      description:
+        "Closing ceremony and distribution of certificates to successful candidates.",
+      isActive: false,
+    },
   ];
 
   const hostInstitutions = [
     {
       name: "Cochin University of Science and Technology",
       address: "Cochin, Kerala",
-      coordinates: { lat: 9.9748, lng: 76.3121 }
+      coordinates: { lat: 9.9748, lng: 76.3121 },
     },
     {
       name: "National Institute of Technology Calicut",
       address: "Calicut, Kerala",
-      coordinates: { lat: 11.3217, lng: 75.9335 }
+      coordinates: { lat: 11.3217, lng: 75.9335 },
     },
     {
       name: "Amrita Vishwa Vidyapeetham",
       address: "Amritapuri, Kerala",
-      coordinates: { lat: 9.0936, lng: 76.4839 }
-    }
+      coordinates: { lat: 9.0936, lng: 76.4839 },
+    },
   ];
 
   return (
@@ -118,7 +149,9 @@ const Schedule = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-ieee-blue mb-2">Schedule</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-ieee-blue mb-2">
+            Schedule
+          </h2>
           <div className="w-24 h-1 bg-ieee-blue mx-auto mb-4"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Important dates for the internship program.
@@ -130,9 +163,11 @@ const Schedule = () => {
           <div className="bg-white rounded-lg shadow-ieee p-6 mb-6">
             <div className="flex items-center mb-4">
               <FaCalendarAlt className="text-ieee-blue text-2xl mr-3" />
-              <h3 className="text-2xl font-bold text-ieee-dark">Program Timeline</h3>
+              <h3 className="text-2xl font-bold text-ieee-dark">
+                Program Timeline
+              </h3>
             </div>
-            
+
             <div className="pl-4">
               {timelineEvents.map((event, index) => (
                 <TimelineEvent
