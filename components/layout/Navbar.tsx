@@ -11,7 +11,7 @@ const navigation = [
   { name: "Topics", href: "#topics" },
   { name: "Eligibility", href: "#eligibility" },
   { name: "Schedule", href: "#schedule" },
-  { name: "Registration", href: "#registration" },
+  { name: "Payment & Confirmation", href: "#registration" },
 ];
 
 export default function Navbar() {
