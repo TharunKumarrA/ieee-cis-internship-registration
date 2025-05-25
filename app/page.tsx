@@ -3,8 +3,9 @@ import About from "@/components/home/About";
 import Topics from "@/components/home/Topics";
 import Eligibility from "@/components/home/Eligibility";
 import Schedule from "@/components/home/Schedule";
-import Registration from "@/components/home/Registration";
 import Contact from "@/components/home/Contact";
+import InternshipDetails from "@/components/home/InternshipDetails";
+import MentorAllocation from "@/components/home/MentorAllocation";
 
 export default function Home() {
   return (
@@ -14,7 +15,8 @@ export default function Home() {
       <Topics />
       <Eligibility />
       <Schedule />
-      <Registration />
+      <MentorAllocation />
+      <InternshipDetails />
       <Contact />
       {/* <div className="h-20 "></div> */}
     </>

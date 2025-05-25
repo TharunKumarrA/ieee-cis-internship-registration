@@ -11,7 +11,8 @@ const navigation = [
   { name: "Topics", href: "#topics" },
   { name: "Eligibility", href: "#eligibility" },
   { name: "Schedule", href: "#schedule" },
-  { name: "Payment & Confirmation", href: "#registration" },
+  { name: "Internship Details", href: "#internship-details" },
+  { name: "Mentor Allocation", href: "#mentor-allocation" },
 ];
 
 export default function Navbar() {
