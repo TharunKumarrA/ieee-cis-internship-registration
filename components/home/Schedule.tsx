@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { FaCalendarAlt, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 import Image from "next/image";
+import siteConfig from "../../data/site-config.json";
 
 interface TimelineEventProps {
   date: string;
@@ -55,71 +56,9 @@ const TimelineEvent = ({
 };
 
 const Schedule = () => {
-  const timelineEvents = [
-    {
-      date: "April 1, 2025",
-      title: "Applications Open",
-      description:
-        "Online applications for the summer internship begin through the IEEE portal.",
-      isActive: false,
-    },
-    {
-      date: "April 20, 2025",
-      title: "Application Deadline",
-      description:
-        "Last date to submit your application and supporting documents.",
-      isActive: false,
-    },
-    {
-      date: "April 25, 2025",
-      title: "Shortlist Announcement",
-      description:
-        "List of shortlisted candidates will be published on the website.",
-      isActive: false,
-    },
-    {
-      date: "May 13, 2025",
-      title: "Email Notification to Selected Students",
-      description:
-        "Emails have been sent to selected students with further instructions.",
-      isActive: true,
-    },
-    {
-      date: "May 16, 2025",
-      title: "Registration Deadline",
-      description:
-        "Selected candidates must pay the registration fee and submit their details by 10:00 PM.",
-      isActive: false,
-    },
-    {
-      date: "May 20, 2025",
-      title: "Orientation Program",
-      description:
-        "Introductory session to welcome participants and explain the internship structure.",
-      isActive: false,
-    },
-    {
-      date: "May 20 – July 30, 2025",
-      title: "Internship Period",
-      description:
-        "10-week hands-on internship across various host institutions.",
-      isActive: false,
-    },
-    {
-      date: "August 5, 2025",
-      title: "Project Presentations",
-      description:
-        "Final presentations and evaluations by mentors and faculty.",
-      isActive: false,
-    },
-    {
-      date: "August 10, 2025",
-      title: "Certification & Closing",
-      description:
-        "Closing ceremony and distribution of certificates to successful candidates.",
-      isActive: false,
-    },
-  ];
+  const { schedule, features } = siteConfig;
+
+  if (!features.showSchedule) return null;
 
   const hostInstitutions = [
     {
@@ -150,11 +89,11 @@ const Schedule = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-ieee-blue mb-2">
-            Schedule
+            {schedule.title}
           </h2>
           <div className="w-24 h-1 bg-ieee-blue mx-auto mb-4"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Important dates for the internship program.
+            {schedule.description}
           </p>
         </motion.div>
 
@@ -164,12 +103,12 @@ const Schedule = () => {
             <div className="flex items-center mb-4">
               <FaCalendarAlt className="text-ieee-blue text-2xl mr-3" />
               <h3 className="text-2xl font-bold text-ieee-dark">
-                Program Timeline
+                {schedule.timelineTitle}
               </h3>
             </div>
 
             <div className="pl-4">
-              {timelineEvents.map((event, index) => (
+              {schedule.timeline.map((event, index) => (
                 <TimelineEvent
                   key={index}
                   date={event.date}

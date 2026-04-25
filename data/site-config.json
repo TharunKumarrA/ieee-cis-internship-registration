@@ -1,0 +1,629 @@
+{
+  "_global_instructions": "Welcome! You can update the text inside the quotes below to change the site content. IMPORTANT: Only change the values on the right side of the colon (:). Ensure you don't delete any quotation marks.",
+  
+  "_help_features": "Change these to true or false (without quotes) to instantly show or hide sections on the live site.",
+  "features": {
+    "showRegistration": true,
+    "showMentorAllocation": true,
+    "showTopics": true,
+    "showSchedule": true
+  },
+  
+  "_help_global": "General settings that apply across the entire site.",
+  "global": {
+    "contactEmail": "ieeecisk@gmail.com"
+  },
+  
+  "_help_navigation": "The links that appear in the top navigation bar. If a feature (like showSchedule) is set to false, its link will automatically hide.",
+  "navigation": [
+    { "name": "Home", "href": "#home" },
+    { "name": "About", "href": "#about" },
+    { "name": "Topics", "href": "#topics" },
+    { "name": "Eligibility", "href": "#eligibility" },
+    { "name": "Schedule", "href": "#schedule" },
+    { "name": "Internship Details", "href": "#internship-details" },
+    { "name": "Mentor Allocation", "href": "#mentor-allocation" },
+    { "name": "Registration", "href": "#registration" }
+  ],
+  
+  "_help_hero": "This is the very first introductory section people see at the top of the website.",
+  "hero": {
+    "title": "IEEE CIS Kerala Section",
+    "subtitle": "Summer Internship 2025",
+    "description": "A Premier Learning Experience in Computational Intelligence",
+    "deadlineText": "Applications open until: April 30, 2025"
+  },
+  
+  "_help_about": "The section answering basic questions about the internship structure.",
+  "about": {
+    "title": "About the Internship",
+    "description": "The IEEE CIS Kerala Section Summer Internship Program offers a unique opportunity for students to gain hands-on experience in cutting-edge computational intelligence technologies under the guidance of expert mentors.",
+    "structure": [
+      {
+        "label": "Mode",
+        "value": "Hybrid (Online learning + Hands-on projects)"
+      },
+      {
+        "label": "Duration",
+        "value": "6 weeks (May 15 - June 30, 2025)"
+      },
+      {
+        "label": "Host Institutions",
+        "value": "Cochin University, NITC, Amrita University"
+      },
+      {
+        "label": "Certificate",
+        "value": "IEEE CIS certified completion certificate"
+      }
+    ],
+    "whyApplyTitle": "Why Apply?",
+    "whyApplyItems": [
+      "Hands-on experience with cutting-edge AI technologies",
+      "Mentorship from leading experts in the field",
+      "Build your professional network in the industry",
+      "Work on real-world projects with practical applications",
+      "Enhance your resume with IEEE certification"
+    ]
+  },
+  
+  "_help_topics": "The list of topics covered during the internship. Ensure the 'icon' name is one of the supported React Icons.",
+  "topics": {
+    "title": "Topics Covered",
+    "description": "Explore cutting-edge technologies and domains in computational intelligence through our comprehensive curriculum.",
+    "items": [
+      {
+        "icon": "FaBrain",
+        "title": "Machine Learning",
+        "description": "Fundamentals of ML algorithms, supervised and unsupervised learning techniques, and practical applications."
+      },
+      {
+        "icon": "FaNetworkWired",
+        "title": "Artificial Intelligence",
+        "description": "Core AI concepts, problem-solving techniques, and modern AI systems development."
+      },
+      {
+        "icon": "FaMicrochip",
+        "title": "Edge AI",
+        "description": "Deploy AI models on edge devices, optimize for resource constraints, and real-time applications."
+      },
+      {
+        "icon": "FaRobot",
+        "title": "Natural Language Processing",
+        "description": "Text processing, sentiment analysis, language models, and conversational AI systems."
+      },
+      {
+        "icon": "FaNetworkWired",
+        "title": "Internet of Things",
+        "description": "IoT architecture, sensor networks, data collection, and intelligent IoT applications."
+      },
+      {
+        "icon": "FaShieldAlt",
+        "title": "Cybersecurity",
+        "description": "Security for AI systems, adversarial machine learning, and ethical hacking techniques."
+      },
+      {
+        "icon": "BsGraphUp",
+        "title": "Data Analytics",
+        "description": "Data visualization, statistical analysis, and business intelligence applications."
+      },
+      {
+        "icon": "FaDatabase",
+        "title": "Big Data",
+        "description": "Process and analyze large datasets using distributed computing frameworks."
+      },
+      {
+        "icon": "MdBiotech",
+        "title": "Computational Biology",
+        "description": "AI applications in genomics, protein structure prediction, and drug discovery."
+      }
+    ]
+  },
+  
+  "_help_eligibility": "Guidelines on who can apply. To add a new list item, copy an existing entry including the quotes, and ensure there's a comma between elements.",
+  "eligibility": {
+    "title": "Eligibility & Selection",
+    "description": "Our merit-based selection process ensures we identify the most promising candidates.",
+    "criteriaTitle": "Eligibility Criteria",
+    "criteria": [
+      "Currently enrolled in B.Tech/BE/M.Tech/ME in Computer Science, Electronics, or related disciplines",
+      "Strong foundation in mathematics, programming, and basic machine learning concepts",
+      "Proficiency in Python or another programming language relevant to AI/ML",
+      "Proven interest in computational intelligence through projects or coursework"
+    ],
+    "ineligibleTitle": "Ineligibility Factors",
+    "ineligibleFactors": [
+      "Students in their final semester (due to program duration requirements)",
+      "Non-technical background without sufficient programming experience",
+      "Unable to commit at least 20 hours per week during the program duration"
+    ],
+    "quotasTitle": "Selection Quotas",
+    "quotas": [
+      { "name": "Per Faculty Mentor", "limit": "Maximum 3 students" },
+      { "name": "Per Institution", "limit": "Maximum 10 students" },
+      { "name": "Total Program Intake", "limit": "Limited to 50 students" }
+    ],
+    "selectionProcessTitle": "Selection Process",
+    "selectionProcess": [
+      {
+        "title": "Application Review",
+        "desc": "All applications are reviewed based on academic background, relevant experience, and statement of purpose."
+      },
+      {
+        "title": "Technical Assessment",
+        "desc": "Shortlisted candidates may be asked to complete a brief technical assessment or project."
+      },
+      {
+        "title": "Final Selection",
+        "desc": "Selected candidates will be notified via email with further instructions for enrollment."
+      }
+    ]
+  },
+  
+  "_help_schedule": "List of dates and events. You can change 'isActive' to true whenever an event completes.",
+  "schedule": {
+    "title": "Schedule",
+    "description": "Important dates for the internship program.",
+    "timelineTitle": "Program Timeline",
+    "timeline": [
+      {
+        "date": "April 1, 2025",
+        "title": "Applications Open",
+        "description": "Online applications for the summer internship begin through the IEEE portal.",
+        "isActive": false
+      },
+      {
+        "date": "April 20, 2025",
+        "title": "Application Deadline",
+        "description": "Last date to submit your application and supporting documents.",
+        "isActive": false
+      },
+      {
+        "date": "April 25, 2025",
+        "title": "Shortlist Announcement",
+        "description": "List of shortlisted candidates will be published on the website.",
+        "isActive": false
+      },
+      {
+        "date": "May 13, 2025",
+        "title": "Email Notification to Selected Students",
+        "description": "Emails have been sent to selected students with further instructions.",
+        "isActive": true
+      },
+      {
+        "date": "May 16, 2025",
+        "title": "Registration Deadline",
+        "description": "Selected candidates must pay the registration fee and submit their details by 10:00 PM.",
+        "isActive": false
+      },
+      {
+        "date": "May 20, 2025",
+        "title": "Orientation Program",
+        "description": "Introductory session to welcome participants and explain the internship structure.",
+        "isActive": false
+      },
+      {
+        "date": "May 20 – July 30, 2025",
+        "title": "Internship Period",
+        "description": "10-week hands-on internship across various host institutions.",
+        "isActive": false
+      },
+      {
+        "date": "August 5, 2025",
+        "title": "Project Presentations",
+        "description": "Final presentations and evaluations by mentors and faculty.",
+        "isActive": false
+      },
+      {
+        "date": "August 10, 2025",
+        "title": "Certification & Closing",
+        "description": "Closing ceremony and distribution of certificates to successful candidates.",
+        "isActive": false
+      }
+    ]
+  },
+  
+  "_help_registration": "Payment portal texts and the full array of selected candidates. Use **text** to make a word bold.",
+  "registration": {
+    "title": "Payment & Confirmation Instructions",
+    "description": "Congratulations to all selected candidates! Please check your inbox for the registration email. Complete your registration by **May 16th, 10:00 PM** by submitting the required details and uploading your payment receipt.",
+    "warningNote": "Failure to complete registration before the deadline will result in forfeiting your selection.",
+    "formInstruction": "Please use the Google Form below to find the payment details and submit your proof of payment.",
+    "formButtonText": "Submit Payment Details",
+    "formUrl": "https://forms.gle/wzxb8iAYUKk1jfGR7",
+    "closedNotice": "Registration Closed on: **April 30, 2025**",
+    "candidatesTableTitle": "Selected Candidates",
+    "selectedCandidates": [
+      {
+        "name": "AACQUILINE LINU VARGHESE",
+        "institution": "LBS Institute Of Technology for Women Poojappura Thiruvananthapuram, Under KTU"
+      },
+      { "name": "Abhijith U", "institution": "TKMCE" },
+      { "name": "Abishek Binu", "institution": "Amrita Vishwa Vidyapeetham" },
+      {
+        "name": "Adhila Fathima T.A",
+        "institution": "Rajiv Gandhi Institute of Technology Pampady, Kottayam"
+      },
+      {
+        "name": "Adithya Pramod Menon",
+        "institution": "Cochin University of Science and Technology"
+      },
+      {
+        "name": "Ajit R",
+        "institution": "Muthoot institute of technology and science"
+      },
+      {
+        "name": "Alen mariya P P",
+        "institution": "SCMS SCHOOL OF ENGINEERING&TECHNOLOGY, ERNAKULAM"
+      },
+      { "name": "Albina Biju", "institution": "College of engineering Adoor" },
+      {
+        "name": "Alisha Mary Shibu",
+        "institution": "Muthoot Institute of Technology and Science"
+      },
+      { "name": "Ananthakrishnan A.S", "institution": "Amrita Vishwa Vidyapeetham" },
+      {
+        "name": "Andrea Tresa Tom",
+        "institution": "St.Joseph's College of Engineering and Technology, Palai"
+      },
+      {
+        "name": "Anju Anson",
+        "institution": "Muthoot Institute of Technology and Science"
+      },
+      {
+        "name": "Anurag S Nair",
+        "institution": "Muthoot Institute of Technology and Science"
+      },
+      {
+        "name": "Aryan Anil",
+        "institution": "Sree Chitra Thirunal College of Engineering"
+      },
+      {
+        "name": "Athul Krishna A",
+        "institution": "National Institute of Technology, Calicut"
+      },
+      {
+        "name": "Behanan K Bahanan",
+        "institution": "Rajagiri School of Engineering and Technology"
+      },
+      {
+        "name": "Chackochan Jose",
+        "institution":
+          "Mar Athanasius College of Engineering (Autonomous), Kothamangalam"
+      },
+      {
+        "name": "Fathima Hanna",
+        "institution": "Rajiv Gandhi Institute of Technology, Kottayam"
+      },
+      {
+        "name": "Fathima Aleesha Sherule",
+        "institution": "LBS College of Engineering Kasaragod"
+      },
+      {
+        "name": "Fayed Mohamed",
+        "institution": "National Institute of Technology, Calicut"
+      },
+      { "name": "Fidha Naisam", "institution": "Rajiv Gandhi Institute Of Technology" },
+      { "name": "Ganesh Chandran C", "institution": "kerala technical university" },
+      { "name": "Hridya B", "institution": "TKM College of Engineering" },
+      {
+        "name": "Irin Maria",
+        "institution": "Government Engineering College Thrissur"
+      },
+      {
+        "name": "Jais Mathew",
+        "institution": "muthoot institute of technology and science"
+      },
+      { "name": "Jesvin Jobi", "institution": "NSS College of Engineering, Palakkad" },
+      {
+        "name": "JESWIN ANTONY CHUNGATH",
+        "institution": "GOVERNMENT ENGINEERING COLLEGE THRISSUR"
+      },
+      { "name": "Joel Job", "institution": "TKMCE, Kollam" },
+      {
+        "name": "Josh Joseph",
+        "institution": "Cochin University of Science and Technology"
+      },
+      { "name": "Jostin Jaison", "institution": "NSS College of engineering palakkad" },
+      {
+        "name": "Jumana Jalal",
+        "institution": "Ilahia College of Engineering & Technology"
+      },
+      { "name": "Kavinraj S", "institution": "Amrita Vishwa Vidyapeetham" },
+      { "name": "Kishan Majithia", "institution": "TKM College of Engineering" },
+      { "name": "Krishnendu A", "institution": "Saintgits College Of Engineering" },
+      {
+        "name": "Mariya Babu",
+        "institution": "Cochin University of Science and Technology"
+      },
+      {
+        "name": "Meenakshi Pramod",
+        "institution": "Cochin University of Science and Technology"
+      },
+      {
+        "name": "MOHAMMED ROSHAN A N",
+        "institution": "Sahrdaya College of engineering and technology"
+      },
+      {
+        "name": "Nandana Nair",
+        "institution": "APJ Abdul Kalam Technological University"
+      },
+      {
+        "name": "Peter Ajith Cherian",
+        "institution": "Mode Engineering College Thrikkakara"
+      },
+      {
+        "name": "Revathy P S",
+        "institution": "Sree Chitra Thirunal College of Engineering"
+      },
+      {
+        "name": "Richard Sabu",
+        "institution": "Rajagiri School of Engineering and Technology"
+      },
+      {
+        "name": "Rose Mary Steephan",
+        "institution": "Vimal Jyothi Engineering College chemperi"
+      },
+      {
+        "name": "SABHARISH P V",
+        "institution": "Rajagiri School Of Engineering and Technology"
+      },
+      {
+        "name": "SALMANUL FARIS PV",
+        "institution": "TKM COLLEGE OF ENGINEERING, KOLLAM"
+      },
+      {
+        "name": "Sangeeth MS",
+        "institution": "Rajagiri school of engineering and technology kakkanad"
+      },
+      {
+        "name": "Sanjana Suresh",
+        "institution": "Muthoot Institute of Technology and Science"
+      },
+      { "name": "Sneha Paul", "institution": "Jyothi Engineering College" },
+      {
+        "name": "Sneha S A",
+        "institution": "Sree Chithra Thirunal College of Engineering"
+      },
+      { "name": "Swathy V", "institution": "NSS College of Engineering,Palakkad" },
+      {
+        "name": "Swetha Varghese",
+        "institution": "Rajiv Gandhi institute of technology Kottayam"
+      },
+      {
+        "name": "Theertha R",
+        "institution": "APJ Abdul Kalam Technological University"
+      },
+      { "name": "Theertha Santhosh", "institution": "NSS College of Engineering" },
+      {
+        "name": "Tom Varghese",
+        "institution": "Government Engineering College Thrissur"
+      }
+    ]
+  },
+  
+  "_help_mentorAllocation": "Contains the structured guidelines layout and the final list mapping students to Mentors. Set isList to true if you are defining an array for 'listItems'. Use **text** to embed bold words inside normal content strings.",
+  "mentorAllocation": {
+    "title": "Mentor Allocation",
+    "detailsTitle": "IEEE CIS Summer Internship Details",
+    "guidelines": [
+      {
+        "title": "1. Duration & Mode",
+        "content": "**Internship Period:** Any 1 month between May 20 and July 31, 2025\n<br />\n**Mode:** Hybrid",
+        "isList": false
+      },
+      {
+        "title": "2. Student Assignment",
+        "content": "Students are assigned based on mutual academic interests and core CIS themes. The list of students allotted for each faculty is available below. Students have been instructed to reach out to their mentors via email.",
+        "isList": false
+      },
+      {
+        "title": "3. Themes to Guide",
+        "content": "",
+        "isList": true,
+        "listItems": [
+          "Neural Networks (incl. deep learning, CNNs, RNNs, etc.)",
+          "Fuzzy Systems",
+          "Evolutionary Computation",
+          "Ambient Intelligence, Artificial Life",
+          "Cultural Learning, Cognitive Developmental Systems",
+          "Other emerging CI paradigms"
+        ]
+      },
+      {
+        "title": "4. Expectations from Mentors",
+        "content": "",
+        "isList": true,
+        "listItems": [
+          "Provide an appropriate problem statement or project area within your expertise",
+          "Hold regular check-ins with your mentees (weekly is recommended)",
+          "Offer feedback on project progress and direction",
+          "Verify the student’s final submission (report and presentation)"
+        ]
+      },
+      {
+        "title": "5. Deliverables from Students",
+        "content": "",
+        "isList": true,
+        "listItems": [
+          "Weekly progress updates (short summaries)",
+          "Final presentation/demo to the mentor",
+          "Final internship report (10–15 pages) — template to be shared separately"
+        ]
+      },
+      {
+        "title": "6. Certification",
+        "content": "Students will receive a certificate jointly from the IEEE CIS Joint Chapter and IEEE Kerala Section after the completion and verification of the internship.",
+        "isList": false
+      }
+    ],
+    "allocations": [
+      {
+        "name": "Aacquiline Linu Varghese",
+        "institution": "Lbs Institule Of Technology For Women",
+        "internshipInstitution": "National Institute Of Technology Calicut",
+        "mentorName": "Dr. Santosh Kumar Behera",
+        "mentorEmail": "skbehera@nitc.ac.in"
+      },
+      {
+        "name": "Adhila Fathima T.A",
+        "institution": "",
+        "internshipInstitution": "National Institute Of Technology Calicut",
+        "mentorName": "Dr. Jayaraj P B",
+        "mentorEmail": "jayarajpb@nitc.ac.in"
+      },
+      {
+        "name": "Adithya Pramod Menon",
+        "institution": "",
+        "internshipInstitution": "Cochin University Of Science And Technology",
+        "mentorName": "Dr. Santosh Kumar G",
+        "mentorEmail": "san@cusat.ac.in"
+      },
+      {
+        "name": "Alen Mariya P P",
+        "institution": "",
+        "internshipInstitution": "Cochin University Of Science And Technology",
+        "mentorName": "Dr. Jeena K",
+        "mentorEmail": "jeenakk@cusat.ac.in"
+      },
+      {
+        "name": "Ananthakrishnan A S",
+        "institution": "Amrita Vishwa Vidyapeetham",
+        "internshipInstitution": "Amrita Vishwa Vidyapeetham",
+        "mentorName": "Dr. Dhanya M. Dhanalakshmy",
+        "mentorEmail": "md_dhanya@cb.amrita.edu"
+      },
+      {
+        "name": "Anju Mary Anson",
+        "institution": "",
+        "internshipInstitution": "Amrita Vishwa Vidyapeetham",
+        "mentorName": "Dr. Dhanya M. Dhanalakshmy",
+        "mentorEmail": "md_dhanya@cb.amrita.edu"
+      },
+      {
+        "name": "Anurag S Nair",
+        "institution": "",
+        "internshipInstitution": "Amrita Vishwa Vidyapeetham",
+        "mentorName": "Dr. Ritwik M",
+        "mentorEmail": "m_ritwik@cb.amrita.edu"
+      },
+      {
+        "name": "Chackochan Jose",
+        "institution": "",
+        "internshipInstitution": "National Institute Of Technology Calicut",
+        "mentorName": "Dr. Santosh Kumar Behera",
+        "mentorEmail": "skbehera@nitc.ac.in"
+      },
+      {
+        "name": "D R Adithyaa",
+        "institution": "Amrita Vishwa Vidyapeetham",
+        "internshipInstitution": "Amrita Vishwa Vidyapeetham",
+        "mentorName": "Dr. Ritwik M",
+        "mentorEmail": "m_ritwik@cb.amrita.edu"
+      },
+      {
+        "name": "Fidha Naisam",
+        "institution": "",
+        "internshipInstitution": "National Institute Of Technology Calicut",
+        "mentorName": "Dr. Jayaraj P B",
+        "mentorEmail": "san@cusat.ac.in"
+      },
+      {
+        "name": "Ganesh Chandran C",
+        "institution": "",
+        "internshipInstitution": "National Institute Of Technology Calicut",
+        "mentorName": "Dr. Shihabudheen K V",
+        "mentorEmail": "shihabudheen@nitc.ac.in"
+      },
+      {
+        "name": "Jeswin Antony Chungath",
+        "institution": "",
+        "internshipInstitution": "National Institute Of Technology Calicut",
+        "mentorName": "Dr. Sudeep P V",
+        "mentorEmail": "sudeep.pv@nitc.ac.in"
+      },
+      {
+        "name": "Josh Joseph",
+        "institution": "",
+        "internshipInstitution": "Cochin University Of Science And Technology",
+        "mentorName": "Dr. Santosh Kumar G",
+        "mentorEmail": "san@cusat.ac.in"
+      },
+      {
+        "name": "Kavinraj S",
+        "institution": "Amrita Vishwa Vidyapeetham",
+        "internshipInstitution": "Amrita Vishwa Vidyapeetham",
+        "mentorName": "Dr. Ritwik M",
+        "mentorEmail": "m_ritwik@cb.amrita.edu"
+      },
+      {
+        "name": "Kishan D Majithia",
+        "institution": "Tkm College Of Engineering Kollen",
+        "internshipInstitution": "Amrita Vishwa Vidyapeetham",
+        "mentorName": "Dr. Dhanya M. Dhanalakshmy",
+        "mentorEmail": "md_dhanya@cb.amrita.edu"
+      },
+      {
+        "name": "Krishnendu A",
+        "institution": "Samtgitis College Of Engineering",
+        "internshipInstitution": "Cochin University Of Science And Technology",
+        "mentorName": "Dr. Shailesh Sivan",
+        "mentorEmail": "shaileshsivan@cusat.ac.in"
+      },
+      {
+        "name": "Nandana Nair",
+        "institution": "",
+        "internshipInstitution": "National Institute Of Technology Calicut",
+        "mentorName": "Dr. Raju Hazari",
+        "mentorEmail": "rajuhazan@nitc.ac.in"
+      },
+      {
+        "name": "Revathy P S",
+        "institution": "",
+        "internshipInstitution": "National Institute Of Technology Calicut",
+        "mentorName": "Dr. Sudeep P V",
+        "mentorEmail": "sudeep.pv@nitc.ac.in"
+      },
+      {
+        "name": "Richard Sabu",
+        "institution": "",
+        "internshipInstitution": "Cochin University Of Science And Technology",
+        "mentorName": "Dr. Jeena K",
+        "mentorEmail": "jeenakk@cusat.ac.in"
+      },
+      {
+        "name": "Sabharish P V",
+        "institution": "",
+        "internshipInstitution": "Cochin University Of Science And Technology",
+        "mentorName": "Dr. Shailesh Sivan",
+        "mentorEmail": "shaileshsivan@cusat.ac.in"
+      },
+      {
+        "name": "Sneha Paul",
+        "institution": "Jyothi Engineering College Thrissar",
+        "internshipInstitution": "National Institute Of Technology Calicut",
+        "mentorName": "Dr. Shihabudheen K V",
+        "mentorEmail": "shihabudheen@nitc.ac.in"
+      },
+      {
+        "name": "Swathy V",
+        "institution": "Nssi College Of Engineering Palakkad",
+        "internshipInstitution": "Amrita Vishwa Vidyapeetham",
+        "mentorName": "Dr. Bagavathi C",
+        "mentorEmail": "c_bagavathi@cb.amrita.edu"
+      },
+      {
+        "name": "Theertha R",
+        "institution": "Nss College Of Engineering",
+        "internshipInstitution": "Amrita Vishwa Vidyapeetham",
+        "mentorName": "Dr. Bagavathi C",
+        "mentorEmail": "c_bagavathi@cb.amrita.edu"
+      }
+    ]
+  },
+  
+  "_help_contact": "Information displayed in the contact action bar at the bottom of the page.",
+  "contact": {
+    "title": "Have a Query?",
+    "description": "Reach out to us directly via email. We'll get back to you as soon as possible."
+  }
+}

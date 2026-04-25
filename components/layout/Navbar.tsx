@@ -5,15 +5,20 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const navigation = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Topics", href: "#topics" },
-  { name: "Eligibility", href: "#eligibility" },
-  { name: "Schedule", href: "#schedule" },
-  { name: "Internship Details", href: "#internship-details" },
-  { name: "Mentor Allocation", href: "#mentor-allocation" },
-];
+import siteConfig from "../../data/site-config.json";
+
+const getNavigation = () => {
+  return siteConfig.navigation.filter((item) => {
+    if (item.href === "#registration" && !siteConfig.features.showRegistration) return false;
+    if (item.href === "#mentor-allocation" && !siteConfig.features.showMentorAllocation) return false;
+    if (item.href === "#internship-details" && !siteConfig.features.showMentorAllocation) return false;
+    if (item.href === "#topics" && !siteConfig.features.showTopics) return false;
+    if (item.href === "#schedule" && !siteConfig.features.showSchedule) return false;
+    return true;
+  });
+};
+
+const navigation = getNavigation();
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

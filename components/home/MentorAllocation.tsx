@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import siteConfig from "../../data/site-config.json";
 
 interface MentorAllocation {
   name: string;
@@ -11,172 +12,13 @@ interface MentorAllocation {
   mentorEmail: string;
 }
 
-const mentorAllocations: MentorAllocation[] = [
-  {
-    name: "Aacquiline Linu Varghese",
-    institution: "Lbs Institule Of Technology For Women",
-    internshipInstitution: "National Institute Of Technology Calicut",
-    mentorName: "Dr. Santosh Kumar Behera",
-    mentorEmail: "skbehera@nitc.ac.in",
-  },
-  {
-    name: "Adhila Fathima T.A",
-    institution: "",
-    internshipInstitution: "National Institute Of Technology Calicut",
-    mentorName: "Dr. Jayaraj P B",
-    mentorEmail: "jayarajpb@nitc.ac.in",
-  },
-  {
-    name: "Adithya Pramod Menon",
-    institution: "",
-    internshipInstitution: "Cochin University Of Science And Technology",
-    mentorName: "Dr. Santosh Kumar G",
-    mentorEmail: "san@cusat.ac.in",
-  },
-  {
-    name: "Alen Mariya P P",
-    institution: "",
-    internshipInstitution: "Cochin University Of Science And Technology",
-    mentorName: "Dr. Jeena K",
-    mentorEmail: "jeenakk@cusat.ac.in",
-  },
-  {
-    name: "Ananthakrishnan A S",
-    institution: "Amrita Vishwa Vidyapeetham",
-    internshipInstitution: "Amrita Vishwa Vidyapeetham",
-    mentorName: "Dr. Dhanya M. Dhanalakshmy",
-    mentorEmail: "md_dhanya@cb.amrita.edu",
-  },
-  {
-    name: "Anju Mary Anson",
-    institution: "",
-    internshipInstitution: "Amrita Vishwa Vidyapeetham",
-    mentorName: "Dr. Dhanya M. Dhanalakshmy",
-    mentorEmail: "md_dhanya@cb.amrita.edu",
-  },
-  {
-    name: "Anurag S Nair",
-    institution: "",
-    internshipInstitution: "Amrita Vishwa Vidyapeetham",
-    mentorName: "Dr. Ritwik M",
-    mentorEmail: "m_ritwik@cb.amrita.edu",
-  },
-  {
-    name: "Chackochan Jose",
-    institution: "",
-    internshipInstitution: "National Institute Of Technology Calicut",
-    mentorName: "Dr. Santosh Kumar Behera",
-    mentorEmail: "skbehera@nitc.ac.in",
-  },
-  {
-    name: "D R Adithyaa",
-    institution: "Amrita Vishwa Vidyapeetham",
-    internshipInstitution: "Amrita Vishwa Vidyapeetham",
-    mentorName: "Dr. Ritwik M",
-    mentorEmail: "m_ritwik@cb.amrita.edu",
-  },
-  {
-    name: "Fidha Naisam",
-    institution: "",
-    internshipInstitution: "National Institute Of Technology Calicut",
-    mentorName: "Dr. Jayaraj P B",
-    mentorEmail: "san@cusat.ac.in",
-  },
-  {
-    name: "Ganesh Chandran C",
-    institution: "",
-    internshipInstitution: "National Institute Of Technology Calicut",
-    mentorName: "Dr. Shihabudheen K V",
-    mentorEmail: "shihabudheen@nitc.ac.in",
-  },
-  {
-    name: "Jeswin Antony Chungath",
-    institution: "",
-    internshipInstitution: "National Institute Of Technology Calicut",
-    mentorName: "Dr. Sudeep P V",
-    mentorEmail: "sudeep.pv@nitc.ac.in",
-  },
-  {
-    name: "Josh Joseph",
-    institution: "",
-    internshipInstitution: "Cochin University Of Science And Technology",
-    mentorName: "Dr. Santosh Kumar G",
-    mentorEmail: "san@cusat.ac.in",
-  },
-  {
-    name: "Kavinraj S",
-    institution: "Amrita Vishwa Vidyapeetham",
-    internshipInstitution: "Amrita Vishwa Vidyapeetham",
-    mentorName: "Dr. Ritwik M",
-    mentorEmail: "m_ritwik@cb.amrita.edu",
-  },
-  {
-    name: "Kishan D Majithia",
-    institution: "Tkm College Of Engineering Kollen",
-    internshipInstitution: "Amrita Vishwa Vidyapeetham",
-    mentorName: "Dr. Dhanya M. Dhanalakshmy",
-    mentorEmail: "md_dhanya@cb.amrita.edu",
-  },
-  {
-    name: "Krishnendu A",
-    institution: "Samtgitis College Of Engineering",
-    internshipInstitution: "Cochin University Of Science And Technology",
-    mentorName: "Dr. Shailesh Sivan",
-    mentorEmail: "shaileshsivan@cusat.ac.in",
-  },
-  {
-    name: "Nandana Nair",
-    institution: "",
-    internshipInstitution: "National Institute Of Technology Calicut",
-    mentorName: "Dr. Raju Hazari",
-    mentorEmail: "rajuhazan@nitc.ac.in",
-  },
-  {
-    name: "Revathy P S",
-    institution: "",
-    internshipInstitution: "National Institute Of Technology Calicut",
-    mentorName: "Dr. Sudeep P V",
-    mentorEmail: "sudeep.pv@nitc.ac.in",
-  },
-  {
-    name: "Richard Sabu",
-    institution: "",
-    internshipInstitution: "Cochin University Of Science And Technology",
-    mentorName: "Dr. Jeena K",
-    mentorEmail: "jeenakk@cusat.ac.in",
-  },
-  {
-    name: "Sabharish P V",
-    institution: "",
-    internshipInstitution: "Cochin University Of Science And Technology",
-    mentorName: "Dr. Shailesh Sivan",
-    mentorEmail: "shaileshsivan@cusat.ac.in",
-  },
-  {
-    name: "Sneha Paul",
-    institution: "Jyothi Engineering College Thrissar",
-    internshipInstitution: "National Institute Of Technology Calicut",
-    mentorName: "Dr. Shihabudheen K V",
-    mentorEmail: "shihabudheen@nitc.ac.in",
-  },
-  {
-    name: "Swathy V",
-    institution: "Nssi College Of Engineering Palakkad",
-    internshipInstitution: "Amrita Vishwa Vidyapeetham",
-    mentorName: "Dr. Bagavathi C",
-    mentorEmail: "c_bagavathi@cb.amrita.edu",
-  },
-  {
-    name: "Theertha R",
-    institution: "Nss College Of Engineering",
-    internshipInstitution: "Amrita Vishwa Vidyapeetham",
-    mentorName: "Dr. Bagavathi C",
-    mentorEmail: "c_bagavathi@cb.amrita.edu",
-  },
-];
-
 const MentorAllocation = () => {
+  const { mentorAllocation, features } = siteConfig;
+  const mentorAllocations = mentorAllocation.allocations;
+
   const [currentPage, setCurrentPage] = useState(1);
+
+  if (!features.showMentorAllocation) return null;
   const candidatesPerPage = 10;
   const totalPages = Math.ceil(mentorAllocations.length / candidatesPerPage);
 
@@ -213,7 +55,7 @@ const MentorAllocation = () => {
           className="max-w-4xl mx-auto"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">
-            Mentor Allocation
+            {mentorAllocation.title}
           </h2>
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg overflow-hidden">
             <div className="overflow-x-auto">

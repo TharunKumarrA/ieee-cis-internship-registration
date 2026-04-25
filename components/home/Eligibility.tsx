@@ -2,26 +2,11 @@
 
 import { motion } from "framer-motion";
 import { FaCheckCircle, FaTimesCircle, FaUserGraduate } from "react-icons/fa";
+import siteConfig from "../../data/site-config.json";
 
 const Eligibility = () => {
-  const eligibilityCriteria = [
-    "Currently enrolled in B.Tech/BE/M.Tech/ME in Computer Science, Electronics, or related disciplines",
-    "Strong foundation in mathematics, programming, and basic machine learning concepts",
-    "Proficiency in Python or another programming language relevant to AI/ML",
-    "Proven interest in computational intelligence through projects or coursework",
-  ];
+  const { eligibility } = siteConfig;
 
-  const ineligibleCriteria = [
-    "Students in their final semester (due to program duration requirements)",
-    "Non-technical background without sufficient programming experience",
-    "Unable to commit at least 20 hours per week during the program duration",
-  ];
-
-  const quotaLimits = [
-    { name: "Per Faculty Mentor", limit: "Maximum 3 students" },
-    { name: "Per Institution", limit: "Maximum 10 students" },
-    { name: "Total Program Intake", limit: "Limited to 50 students" },
-  ];
 
   return (
     <section id="eligibility" className="py-16 bg-[#00629B] text-white">
@@ -34,12 +19,11 @@ const Eligibility = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-2">
-            Eligibility & Selection
+            {eligibility.title}
           </h2>
           <div className="w-24 h-1 bg-white mx-auto mb-4"></div>
           <p className="text-lg text-gray-100 max-w-2xl mx-auto">
-            Our merit-based selection process ensures we identify the most
-            promising candidates.
+            {eligibility.description}
           </p>
         </motion.div>
 
@@ -54,10 +38,10 @@ const Eligibility = () => {
           >
             <div className="flex items-center mb-4">
               <FaCheckCircle className="text-green-500 text-2xl mr-3" />
-              <h3 className="text-xl font-bold">Eligibility Criteria</h3>
+              <h3 className="text-xl font-bold">{eligibility.criteriaTitle}</h3>
             </div>
             <ul className="space-y-3">
-              {eligibilityCriteria.map((item, index) => (
+              {eligibility.criteria.map((item, index) => (
                 <li key={index} className="flex items-start">
                   <span className="text-green-500 mr-2 mt-1">•</span>
                   <span>{item}</span>
@@ -76,10 +60,10 @@ const Eligibility = () => {
           >
             <div className="flex items-center mb-4">
               <FaTimesCircle className="text-red-500 text-2xl mr-3" />
-              <h3 className="text-xl font-bold">Ineligibility Factors</h3>
+              <h3 className="text-xl font-bold">{eligibility.ineligibleTitle}</h3>
             </div>
             <ul className="space-y-3">
-              {ineligibleCriteria.map((item, index) => (
+              {eligibility.ineligibleFactors.map((item, index) => (
                 <li key={index} className="flex items-start">
                   <span className="text-red-500 mr-2 mt-1">•</span>
                   <span>{item}</span>
@@ -98,10 +82,10 @@ const Eligibility = () => {
           >
             <div className="flex items-center mb-4">
               <FaUserGraduate className="text-ieee-blue text-2xl mr-3" />
-              <h3 className="text-xl font-bold">Selection Quotas</h3>
+              <h3 className="text-xl font-bold">{eligibility.quotasTitle}</h3>
             </div>
             <ul className="space-y-3">
-              {quotaLimits.map((item, index) => (
+              {eligibility.quotas.map((item, index) => (
                 <li key={index} className="flex flex-col">
                   <span className="font-medium">{item.name}</span>
                   <span className="bg-ieee-light rounded px-3 py-1 mt-1 inline-block font-bold text-ieee-blue">
@@ -122,23 +106,10 @@ const Eligibility = () => {
           className="mt-10 bg-ieee-light text-white rounded-lg shadow-ieee p-6"
         >
           <h3 className="text-2xl font-bold text-ieee-blue mb-4 text-center">
-            Selection Process
+            {eligibility.selectionProcessTitle}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Application Review",
-                desc: "All applications are reviewed based on academic background, relevant experience, and statement of purpose.",
-              },
-              {
-                title: "Technical Assessment",
-                desc: "Shortlisted candidates may be asked to complete a brief technical assessment or project.",
-              },
-              {
-                title: "Final Selection",
-                desc: "Selected candidates will be notified via email with further instructions for enrollment.",
-              },
-            ].map((step, idx) => (
+            {eligibility.selectionProcess.map((step, idx) => (
               <div key={idx} className="p-5 rounded-lg">
                 <div className="text-ieee-blue text-2xl font-bold mb-2 flex items-center">
                   <span className="bg-ieee-blue text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">

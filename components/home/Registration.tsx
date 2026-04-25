@@ -2,182 +2,17 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import siteConfig from "../../data/site-config.json";
 
 interface Candidate {
   name: string;
   institution: string;
 }
 
-const candidates: Candidate[] = [
-  {
-    name: "AACQUILINE LINU VARGHESE",
-    institution:
-      "LBS Institute Of Technology for Women Poojappura Thiruvananthapuram, Under KTU",
-  },
-  { name: "Abhijith U", institution: "TKMCE" },
-  { name: "Abishek Binu", institution: "Amrita Vishwa Vidyapeetham" },
-  {
-    name: "Adhila Fathima T.A",
-    institution: "Rajiv Gandhi Institute of Technology Pampady, Kottayam",
-  },
-  {
-    name: "Adithya Pramod Menon",
-    institution: "Cochin University of Science and Technology",
-  },
-  {
-    name: "Ajit R",
-    institution: "Muthoot institute of technology and science",
-  },
-  {
-    name: "Alen mariya P P",
-    institution: "SCMS SCHOOL OF ENGINEERING&TECHNOLOGY, ERNAKULAM",
-  },
-  { name: "Albina Biju", institution: "College of engineering Adoor" },
-  {
-    name: "Alisha Mary Shibu",
-    institution: "Muthoot Institute of Technology and Science",
-  },
-  { name: "Ananthakrishnan A.S", institution: "Amrita Vishwa Vidyapeetham" },
-  {
-    name: "Andrea Tresa Tom",
-    institution: "St.Joseph's College of Engineering and Technology, Palai",
-  },
-  {
-    name: "Anju Anson",
-    institution: "Muthoot Institute of Technology and Science",
-  },
-  {
-    name: "Anurag S Nair",
-    institution: "Muthoot Institute of Technology and Science",
-  },
-  {
-    name: "Aryan Anil",
-    institution: "Sree Chitra Thirunal College of Engineering",
-  },
-  {
-    name: "Athul Krishna A",
-    institution: "National Institute of Technology, Calicut",
-  },
-  {
-    name: "Behanan K Bahanan",
-    institution: "Rajagiri School of Engineering and Technology",
-  },
-  {
-    name: "Chackochan Jose",
-    institution:
-      "Mar Athanasius College of Engineering (Autonomous), Kothamangalam",
-  },
-  {
-    name: "Fathima Hanna",
-    institution: "Rajiv Gandhi Institute of Technology, Kottayam",
-  },
-  {
-    name: "Fathima Aleesha Sherule",
-    institution: "LBS College of Engineering Kasaragod",
-  },
-  {
-    name: "Fayed Mohamed",
-    institution: "National Institute of Technology, Calicut",
-  },
-  { name: "Fidha Naisam", institution: "Rajiv Gandhi Institute Of Technology" },
-  { name: "Ganesh Chandran C", institution: "kerala technical university" },
-  { name: "Hridya B", institution: "TKM College of Engineering" },
-  {
-    name: "Irin Maria",
-    institution: "Government Engineering College Thrissur",
-  },
-  {
-    name: "Jais Mathew",
-    institution: "muthoot institute of technology and science",
-  },
-  { name: "Jesvin Jobi", institution: "NSS College of Engineering, Palakkad" },
-  {
-    name: "JESWIN ANTONY CHUNGATH",
-    institution: "GOVERNMENT ENGINEERING COLLEGE THRISSUR",
-  },
-  { name: "Joel Job", institution: "TKMCE, Kollam" },
-  {
-    name: "Josh Joseph",
-    institution: "Cochin University of Science and Technology",
-  },
-  { name: "Jostin Jaison", institution: "NSS College of engineering palakkad" },
-  {
-    name: "Jumana Jalal",
-    institution: "Ilahia College of Engineering & Technology",
-  },
-  { name: "Kavinraj S", institution: "Amrita Vishwa Vidyapeetham" },
-  { name: "Kishan Majithia", institution: "TKM College of Engineering" },
-  { name: "Krishnendu A", institution: "Saintgits College Of Engineering" },
-  {
-    name: "Mariya Babu",
-    institution: "Cochin University of Science and Technology",
-  },
-  {
-    name: "Meenakshi Pramod",
-    institution: "Cochin University of Science and Technology",
-  },
-  {
-    name: "MOHAMMED ROSHAN A N",
-    institution: "Sahrdaya College of engineering and technology",
-  },
-  {
-    name: "Nandana Nair",
-    institution: "APJ Abdul Kalam Technological University",
-  },
-  {
-    name: "Peter Ajith Cherian",
-    institution: "Mode Engineering College Thrikkakara",
-  },
-  {
-    name: "Revathy P S",
-    institution: "Sree Chitra Thirunal College of Engineering",
-  },
-  {
-    name: "Richard Sabu",
-    institution: "Rajagiri School of Engineering and Technology",
-  },
-  {
-    name: "Rose Mary Steephan",
-    institution: "Vimal Jyothi Engineering College chemperi",
-  },
-  {
-    name: "SABHARISH P V",
-    institution: "Rajagiri School Of Engineering and Technology",
-  },
-  {
-    name: "SALMANUL FARIS PV",
-    institution: "TKM COLLEGE OF ENGINEERING, KOLLAM",
-  },
-  {
-    name: "Sangeeth MS",
-    institution: "Rajagiri school of engineering and technology kakkanad",
-  },
-  {
-    name: "Sanjana Suresh",
-    institution: "Muthoot Institute of Technology and Science",
-  },
-  { name: "Sneha Paul", institution: "Jyothi Engineering College" },
-  {
-    name: "Sneha S A",
-    institution: "Sree Chithra Thirunal College of Engineering",
-  },
-  { name: "Swathy V", institution: "NSS College of Engineering,Palakkad" },
-  {
-    name: "Swetha Varghese",
-    institution: "Rajiv Gandhi institute of technology Kottayam",
-  },
-  {
-    name: "Theertha R",
-    institution: "APJ Abdul Kalam Technological University",
-  },
-  { name: "Theertha Santhosh", institution: "NSS College of Engineering" },
-  {
-    name: "Tom Varghese",
-    institution: "Government Engineering College Thrissur",
-  },
-];
-
 const SelectedCandidates = () => {
+  const { registration } = siteConfig;
+  const candidates = registration.selectedCandidates;
+  
   const [currentPage, setCurrentPage] = useState(1);
   const candidatesPerPage = 10;
   const totalPages = Math.ceil(candidates.length / candidatesPerPage);
@@ -210,7 +45,7 @@ const SelectedCandidates = () => {
       className="mt-12 max-w-4xl mx-auto"
     >
       <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
-        Selected Candidates
+        {registration.candidatesTableTitle}
       </h3>
       <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg overflow-hidden">
         <div className="overflow-x-auto">
@@ -270,6 +105,10 @@ const SelectedCandidates = () => {
 };
 
 export default function Registration() {
+  const { registration, features } = siteConfig;
+
+  if (!features.showRegistration) return null;
+
   return (
     <section
       id="registration"
@@ -287,14 +126,11 @@ export default function Registration() {
           className="max-w-3xl mx-auto"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
-            Payment & Confirmation Instructions
+            {registration.title}
           </h2>
 
           <p className="text-lg md:text-xl text-gray-200 mb-8">
-            Congratulations to all selected candidates! Please check your inbox
-            for the registration email. Complete your registration by{" "}
-            <strong>May 16th, 10:00 PM</strong> by submitting the required
-            details and uploading your payment receipt.
+            <span dangerouslySetInnerHTML={{ __html: registration.description.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
           </p>
 
           <motion.p
@@ -303,8 +139,7 @@ export default function Registration() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            <strong>Note:</strong> Failure to complete registration before the
-            deadline will result in forfeiting your selection.
+            <span dangerouslySetInnerHTML={{ __html: `<strong>Note:</strong> ${registration.warningNote}` }} />
           </motion.p>
 
           <motion.div
@@ -314,16 +149,15 @@ export default function Registration() {
             className="mt-6 max-w-3xl mx-auto"
           >
             <p className="text-lg md:text-xl text-gray-200 mb-4">
-              Please use the Google Form below to find the payment details and
-              submit your proof of payment.
+              {registration.formInstruction}
             </p>
             <a
-              href="https://forms.gle/wzxb8iAYUKk1jfGR7"
+              href={registration.formUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="nline-block bg-white text-ieeeBlue font-bold py-3 px-6 rounded-lg text-lg hover:bg-gray-200 transition-colors shadow-md"
+              className="inline-block bg-white text-ieeeBlue font-bold py-3 px-6 rounded-lg text-lg hover:bg-gray-200 transition-colors shadow-md"
             >
-              Submit Payment Details
+              {registration.formButtonText}
             </a>
           </motion.div>
 
@@ -349,7 +183,7 @@ export default function Registration() {
                 />
               </svg>
               <span>
-                Registration Closed on: <strong>April 30, 2025</strong>
+                <span dangerouslySetInnerHTML={{ __html: registration.closedNotice.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
               </span>
             </div>
           </motion.div>

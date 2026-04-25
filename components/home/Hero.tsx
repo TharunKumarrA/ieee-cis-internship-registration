@@ -3,8 +3,10 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import siteConfig from "../../data/site-config.json";
 
 export default function Hero() {
+  const { hero, features } = siteConfig;
   return (
     <section id="home" className="relative h-screen flex items-center">
       {/* Background with gradient */}
@@ -23,14 +25,14 @@ export default function Hero() {
             className="max-w-2xl text-center lg:text-left"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-4">
-              IEEE CIS Kerala Section
+              {hero.title}
             </h1>
             <h1 className="text-3xl md:text-6xl font-bold text-white leading-tight mb-6">
-              Summer Internship 2025
+              {hero.subtitle}
             </h1>
 
             <p className="text-xl md:text-2xl text-white mb-8">
-              A Premier Learning Experience in Computational Intelligence
+              {hero.description}
             </p>
 
             <motion.div
@@ -39,9 +41,11 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
-              <Link href="#registration" className="btn-primary">
-                Apply Now
-              </Link>
+              {features.showRegistration && (
+                <Link href="#registration" className="btn-primary">
+                  Apply Now
+                </Link>
+              )}
               <Link href="#about" className="btn-secondary bg-white">
                 Learn More
               </Link>
@@ -69,7 +73,7 @@ export default function Hero() {
                   />
                 </svg>
                 <span className="text-white">
-                  Applications open until: <strong>April 30, 2025</strong>
+                  <span dangerouslySetInnerHTML={{ __html: hero.deadlineText.replace(/(April 30, 2025)/, '<strong>$1</strong>') }} />
                 </span>
               </div>
             </motion.div>
