@@ -1,0 +1,182 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (assume main)
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "config"
+    label: "Site Configuration"
+    editor:
+      preview: false
+    files:
+      - file: "data/site-config.json"
+        label: "Site Config"
+        name: "site_config"
+        fields:
+          - {label: "Global Instructions", name: "_global_instructions", widget: "hidden", default: "Welcome! You can update the text inside the quotes below to change the site content. IMPORTANT: Only change the values on the right side of the colon (:). Ensure you don't delete any quotation marks."}
+          - {label: "Help Features", name: "_help_features", widget: "hidden", default: "Change these to true or false (without quotes) to instantly show or hide sections on the live site."}
+          - {label: "Help Global", name: "_help_global", widget: "hidden", default: "General settings that apply across the entire site."}
+          - {label: "Help Navigation", name: "_help_navigation", widget: "hidden", default: "The links that appear in the top navigation bar. If a feature (like showSchedule) is set to false, its link will automatically hide."}
+          - {label: "Help Hero", name: "_help_hero", widget: "hidden", default: "This is the very first introductory section people see at the top of the website."}
+          - {label: "Help About", name: "_help_about", widget: "hidden", default: "The section answering basic questions about the internship structure."}
+          - {label: "Help Topics", name: "_help_topics", widget: "hidden", default: "The list of topics covered during the internship. Ensure the 'icon' name is one of the supported React Icons."}
+          - {label: "Help Eligibility", name: "_help_eligibility", widget: "hidden", default: "Guidelines on who can apply. To add a new list item, copy an existing entry including the quotes, and ensure there's a comma between elements."}
+          - {label: "Help Schedule", name: "_help_schedule", widget: "hidden", default: "List of dates and events. You can change 'isActive' to true whenever an event completes."}
+          - {label: "Help Registration", name: "_help_registration", widget: "hidden", default: "Payment portal texts and the full array of selected candidates. Use **text** to make a word bold."}
+          - {label: "Help Mentor Allocation", name: "_help_mentorAllocation", widget: "hidden", default: "Contains the structured guidelines layout and the final list mapping students to Mentors. Set isList to true if you are defining an array for 'listItems'. Use **text** to embed bold words inside normal content strings."}
+          - {label: "Help Contact", name: "_help_contact", widget: "hidden", default: "Information displayed in the contact action bar at the bottom of the page."}
+
+          - label: "Features"
+            name: "features"
+            widget: "object"
+            fields:
+              - {label: "Show Registration", name: "showRegistration", widget: "boolean", default: false}
+              - {label: "Show Mentor Allocation", name: "showMentorAllocation", widget: "boolean", default: false}
+              - {label: "Show Topics", name: "showTopics", widget: "boolean", default: true}
+              - {label: "Show Schedule", name: "showSchedule", widget: "boolean", default: true}
+
+          - label: "Global Settings"
+            name: "global"
+            widget: "object"
+            fields:
+              - {label: "Contact Email", name: "contactEmail", widget: "string"}
+
+          - label: "Navigation"
+            name: "navigation"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Href", name: "href", widget: "string"}
+
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Deadline Text", name: "deadlineText", widget: "string"}
+
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - label: "Structure"
+                name: "structure"
+                widget: "list"
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "Value", name: "value", widget: "string"}
+              - {label: "Why Apply Title", name: "whyApplyTitle", widget: "string"}
+              - {label: "Why Apply Items", name: "whyApplyItems", widget: "list", field: {name: "item", widget: "string"}}
+
+          - label: "Topics Section"
+            name: "topics"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Icon (React Icon Name)", name: "icon", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+
+          - label: "Eligibility Section"
+            name: "eligibility"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Criteria Title", name: "criteriaTitle", widget: "string"}
+              - {label: "Criteria", name: "criteria", widget: "list", field: {name: "item", widget: "string"}}
+              - {label: "Ineligible Title", name: "ineligibleTitle", widget: "string"}
+              - {label: "Ineligible Factors", name: "ineligibleFactors", widget: "list", field: {name: "item", widget: "string"}}
+              - {label: "Quotas Title", name: "quotasTitle", widget: "string"}
+              - label: "Quotas"
+                name: "quotas"
+                widget: "list"
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Limit", name: "limit", widget: "string"}
+              - {label: "Selection Process Title", name: "selectionProcessTitle", widget: "string"}
+              - label: "Selection Process"
+                name: "selectionProcess"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "desc", widget: "text"}
+
+          - label: "Schedule Section"
+            name: "schedule"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Timeline Title", name: "timelineTitle", widget: "string"}
+              - label: "Timeline Events"
+                name: "timeline"
+                widget: "list"
+                fields:
+                  - {label: "Date", name: "date", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - {label: "Is Active (Completed)", name: "isActive", widget: "boolean", default: false}
+
+          - label: "Registration Section"
+            name: "registration"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Warning Note", name: "warningNote", widget: "string"}
+              - {label: "Form Instruction", name: "formInstruction", widget: "string"}
+              - {label: "Form Button Text", name: "formButtonText", widget: "string"}
+              - {label: "Form URL", name: "formUrl", widget: "string"}
+              - {label: "Closed Notice", name: "closedNotice", widget: "string"}
+              - {label: "Candidates Table Title", name: "candidatesTableTitle", widget: "string"}
+              - label: "Selected Candidates"
+                name: "selectedCandidates"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Institution", name: "institution", widget: "string"}
+
+          - label: "Mentor Allocation Section"
+            name: "mentorAllocation"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Details Title", name: "detailsTitle", widget: "string"}
+              - label: "Guidelines"
+                name: "guidelines"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Content", name: "content", widget: "text", required: false}
+                  - {label: "Is List?", name: "isList", widget: "boolean", default: false}
+                  - {label: "List Items", name: "listItems", widget: "list", field: {name: "item", widget: "string"}, required: false}
+              - label: "Allocations"
+                name: "allocations"
+                widget: "list"
+                required: false
+                fields:
+                  - {label: "Student Name", name: "name", widget: "string"}
+                  - {label: "Student Institution", name: "institution", widget: "string"}
+                  - {label: "Internship Institution", name: "internshipInstitution", widget: "string"}
+                  - {label: "Mentor Name", name: "mentorName", widget: "string"}
+                  - {label: "Mentor Email", name: "mentorEmail", widget: "string"}
+
+          - label: "Contact Section"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
