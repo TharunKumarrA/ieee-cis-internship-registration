@@ -315,7 +315,7 @@
   },
   "_help_features": "Change these to true or false (without quotes) to instantly show or hide sections on the live site.",
   "features": {
-    "showRegistration": true,
+    "showRegistration": false,
     "showMentorAllocation": false,
     "showTopics": true,
     "showSchedule": true
