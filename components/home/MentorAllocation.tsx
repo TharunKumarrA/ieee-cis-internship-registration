@@ -14,7 +14,7 @@ interface MentorAllocation {
 
 const MentorAllocation = () => {
   const { mentorAllocation, features } = siteConfig;
-  const mentorAllocations = mentorAllocation.allocations;
+  const mentorAllocations = mentorAllocation.allocations as MentorAllocation[];
 
   const [currentPage, setCurrentPage] = useState(1);
 

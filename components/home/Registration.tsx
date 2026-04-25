@@ -11,7 +11,7 @@ interface Candidate {
 
 const SelectedCandidates = () => {
   const { registration } = siteConfig;
-  const candidates = registration.selectedCandidates;
+  const candidates = registration.selectedCandidates as Candidate[];
   
   const [currentPage, setCurrentPage] = useState(1);
   const candidatesPerPage = 10;
