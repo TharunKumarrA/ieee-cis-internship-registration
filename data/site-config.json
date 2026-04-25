@@ -3,8 +3,8 @@
   
   "_help_features": "Change these to true or false (without quotes) to instantly show or hide sections on the live site.",
   "features": {
-    "showRegistration": true,
-    "showMentorAllocation": true,
+    "showRegistration": false,
+    "showMentorAllocation": false,
     "showTopics": true,
     "showSchedule": true
   },
@@ -29,9 +29,9 @@
   "_help_hero": "This is the very first introductory section people see at the top of the website.",
   "hero": {
     "title": "IEEE CIS Kerala Section",
-    "subtitle": "Summer Internship 2025",
+    "subtitle": "Summer Internship 2026",
     "description": "A Premier Learning Experience in Computational Intelligence",
-    "deadlineText": "Applications open until: April 30, 2025"
+    "deadlineText": "Applications open until: TBD"
   },
   
   "_help_about": "The section answering basic questions about the internship structure.",
@@ -45,11 +45,11 @@
       },
       {
         "label": "Duration",
-        "value": "6 weeks (May 15 - June 30, 2025)"
+        "value": "6 weeks (Dates TBD)"
       },
       {
         "label": "Host Institutions",
-        "value": "Cochin University, NITC, Amrita University"
+        "value": "TBD"
       },
       {
         "label": "Certificate",
@@ -138,9 +138,9 @@
     ],
     "quotasTitle": "Selection Quotas",
     "quotas": [
-      { "name": "Per Faculty Mentor", "limit": "Maximum 3 students" },
-      { "name": "Per Institution", "limit": "Maximum 10 students" },
-      { "name": "Total Program Intake", "limit": "Limited to 50 students" }
+      { "name": "Per Faculty Mentor", "limit": "Maximum TBD students" },
+      { "name": "Per Institution", "limit": "Maximum TBD students" },
+      { "name": "Total Program Intake", "limit": "Limited to TBD students" }
     ],
     "selectionProcessTitle": "Selection Process",
     "selectionProcess": [
@@ -166,55 +166,55 @@
     "timelineTitle": "Program Timeline",
     "timeline": [
       {
-        "date": "April 1, 2025",
+        "date": "TBD 2026",
         "title": "Applications Open",
         "description": "Online applications for the summer internship begin through the IEEE portal.",
         "isActive": false
       },
       {
-        "date": "April 20, 2025",
+        "date": "TBD 2026",
         "title": "Application Deadline",
         "description": "Last date to submit your application and supporting documents.",
         "isActive": false
       },
       {
-        "date": "April 25, 2025",
+        "date": "TBD 2026",
         "title": "Shortlist Announcement",
         "description": "List of shortlisted candidates will be published on the website.",
         "isActive": false
       },
       {
-        "date": "May 13, 2025",
+        "date": "TBD 2026",
         "title": "Email Notification to Selected Students",
         "description": "Emails have been sent to selected students with further instructions.",
-        "isActive": true
+        "isActive": false
       },
       {
-        "date": "May 16, 2025",
+        "date": "TBD 2026",
         "title": "Registration Deadline",
         "description": "Selected candidates must pay the registration fee and submit their details by 10:00 PM.",
         "isActive": false
       },
       {
-        "date": "May 20, 2025",
+        "date": "TBD 2026",
         "title": "Orientation Program",
         "description": "Introductory session to welcome participants and explain the internship structure.",
         "isActive": false
       },
       {
-        "date": "May 20 – July 30, 2025",
+        "date": "TBD 2026",
         "title": "Internship Period",
         "description": "10-week hands-on internship across various host institutions.",
         "isActive": false
       },
       {
-        "date": "August 5, 2025",
+        "date": "TBD 2026",
         "title": "Project Presentations",
         "description": "Final presentations and evaluations by mentors and faculty.",
         "isActive": false
       },
       {
-        "date": "August 10, 2025",
+        "date": "TBD 2026",
         "title": "Certification & Closing",
         "description": "Closing ceremony and distribution of certificates to successful candidates.",
         "isActive": false
@@ -225,180 +225,14 @@
   "_help_registration": "Payment portal texts and the full array of selected candidates. Use **text** to make a word bold.",
   "registration": {
     "title": "Payment & Confirmation Instructions",
-    "description": "Congratulations to all selected candidates! Please check your inbox for the registration email. Complete your registration by **May 16th, 10:00 PM** by submitting the required details and uploading your payment receipt.",
+    "description": "Congratulations to all selected candidates! Please check your inbox for the registration email. Complete your registration by **TBD, 10:00 PM** by submitting the required details and uploading your payment receipt.",
     "warningNote": "Failure to complete registration before the deadline will result in forfeiting your selection.",
     "formInstruction": "Please use the Google Form below to find the payment details and submit your proof of payment.",
     "formButtonText": "Submit Payment Details",
-    "formUrl": "https://forms.gle/wzxb8iAYUKk1jfGR7",
-    "closedNotice": "Registration Closed on: **April 30, 2025**",
+    "formUrl": "TBD",
+    "closedNotice": "Registration Closed on: **TBD 2026**",
     "candidatesTableTitle": "Selected Candidates",
-    "selectedCandidates": [
-      {
-        "name": "AACQUILINE LINU VARGHESE",
-        "institution": "LBS Institute Of Technology for Women Poojappura Thiruvananthapuram, Under KTU"
-      },
-      { "name": "Abhijith U", "institution": "TKMCE" },
-      { "name": "Abishek Binu", "institution": "Amrita Vishwa Vidyapeetham" },
-      {
-        "name": "Adhila Fathima T.A",
-        "institution": "Rajiv Gandhi Institute of Technology Pampady, Kottayam"
-      },
-      {
-        "name": "Adithya Pramod Menon",
-        "institution": "Cochin University of Science and Technology"
-      },
-      {
-        "name": "Ajit R",
-        "institution": "Muthoot institute of technology and science"
-      },
-      {
-        "name": "Alen mariya P P",
-        "institution": "SCMS SCHOOL OF ENGINEERING&TECHNOLOGY, ERNAKULAM"
-      },
-      { "name": "Albina Biju", "institution": "College of engineering Adoor" },
-      {
-        "name": "Alisha Mary Shibu",
-        "institution": "Muthoot Institute of Technology and Science"
-      },
-      { "name": "Ananthakrishnan A.S", "institution": "Amrita Vishwa Vidyapeetham" },
-      {
-        "name": "Andrea Tresa Tom",
-        "institution": "St.Joseph's College of Engineering and Technology, Palai"
-      },
-      {
-        "name": "Anju Anson",
-        "institution": "Muthoot Institute of Technology and Science"
-      },
-      {
-        "name": "Anurag S Nair",
-        "institution": "Muthoot Institute of Technology and Science"
-      },
-      {
-        "name": "Aryan Anil",
-        "institution": "Sree Chitra Thirunal College of Engineering"
-      },
-      {
-        "name": "Athul Krishna A",
-        "institution": "National Institute of Technology, Calicut"
-      },
-      {
-        "name": "Behanan K Bahanan",
-        "institution": "Rajagiri School of Engineering and Technology"
-      },
-      {
-        "name": "Chackochan Jose",
-        "institution":
-          "Mar Athanasius College of Engineering (Autonomous), Kothamangalam"
-      },
-      {
-        "name": "Fathima Hanna",
-        "institution": "Rajiv Gandhi Institute of Technology, Kottayam"
-      },
-      {
-        "name": "Fathima Aleesha Sherule",
-        "institution": "LBS College of Engineering Kasaragod"
-      },
-      {
-        "name": "Fayed Mohamed",
-        "institution": "National Institute of Technology, Calicut"
-      },
-      { "name": "Fidha Naisam", "institution": "Rajiv Gandhi Institute Of Technology" },
-      { "name": "Ganesh Chandran C", "institution": "kerala technical university" },
-      { "name": "Hridya B", "institution": "TKM College of Engineering" },
-      {
-        "name": "Irin Maria",
-        "institution": "Government Engineering College Thrissur"
-      },
-      {
-        "name": "Jais Mathew",
-        "institution": "muthoot institute of technology and science"
-      },
-      { "name": "Jesvin Jobi", "institution": "NSS College of Engineering, Palakkad" },
-      {
-        "name": "JESWIN ANTONY CHUNGATH",
-        "institution": "GOVERNMENT ENGINEERING COLLEGE THRISSUR"
-      },
-      { "name": "Joel Job", "institution": "TKMCE, Kollam" },
-      {
-        "name": "Josh Joseph",
-        "institution": "Cochin University of Science and Technology"
-      },
-      { "name": "Jostin Jaison", "institution": "NSS College of engineering palakkad" },
-      {
-        "name": "Jumana Jalal",
-        "institution": "Ilahia College of Engineering & Technology"
-      },
-      { "name": "Kavinraj S", "institution": "Amrita Vishwa Vidyapeetham" },
-      { "name": "Kishan Majithia", "institution": "TKM College of Engineering" },
-      { "name": "Krishnendu A", "institution": "Saintgits College Of Engineering" },
-      {
-        "name": "Mariya Babu",
-        "institution": "Cochin University of Science and Technology"
-      },
-      {
-        "name": "Meenakshi Pramod",
-        "institution": "Cochin University of Science and Technology"
-      },
-      {
-        "name": "MOHAMMED ROSHAN A N",
-        "institution": "Sahrdaya College of engineering and technology"
-      },
-      {
-        "name": "Nandana Nair",
-        "institution": "APJ Abdul Kalam Technological University"
-      },
-      {
-        "name": "Peter Ajith Cherian",
-        "institution": "Mode Engineering College Thrikkakara"
-      },
-      {
-        "name": "Revathy P S",
-        "institution": "Sree Chitra Thirunal College of Engineering"
-      },
-      {
-        "name": "Richard Sabu",
-        "institution": "Rajagiri School of Engineering and Technology"
-      },
-      {
-        "name": "Rose Mary Steephan",
-        "institution": "Vimal Jyothi Engineering College chemperi"
-      },
-      {
-        "name": "SABHARISH P V",
-        "institution": "Rajagiri School Of Engineering and Technology"
-      },
-      {
-        "name": "SALMANUL FARIS PV",
-        "institution": "TKM COLLEGE OF ENGINEERING, KOLLAM"
-      },
-      {
-        "name": "Sangeeth MS",
-        "institution": "Rajagiri school of engineering and technology kakkanad"
-      },
-      {
-        "name": "Sanjana Suresh",
-        "institution": "Muthoot Institute of Technology and Science"
-      },
-      { "name": "Sneha Paul", "institution": "Jyothi Engineering College" },
-      {
-        "name": "Sneha S A",
-        "institution": "Sree Chithra Thirunal College of Engineering"
-      },
-      { "name": "Swathy V", "institution": "NSS College of Engineering,Palakkad" },
-      {
-        "name": "Swetha Varghese",
-        "institution": "Rajiv Gandhi institute of technology Kottayam"
-      },
-      {
-        "name": "Theertha R",
-        "institution": "APJ Abdul Kalam Technological University"
-      },
-      { "name": "Theertha Santhosh", "institution": "NSS College of Engineering" },
-      {
-        "name": "Tom Varghese",
-        "institution": "Government Engineering College Thrissur"
-      }
-    ]
+    "selectedCandidates": []
   },
   
   "_help_mentorAllocation": "Contains the structured guidelines layout and the final list mapping students to Mentors. Set isList to true if you are defining an array for 'listItems'. Use **text** to embed bold words inside normal content strings.",
@@ -408,7 +242,7 @@
     "guidelines": [
       {
         "title": "1. Duration & Mode",
-        "content": "**Internship Period:** Any 1 month between May 20 and July 31, 2025\n<br />\n**Mode:** Hybrid",
+        "content": "**Internship Period:** Any 1 month between TBD and TBD 2026\n<br />\n**Mode:** Hybrid",
         "isList": false
       },
       {
@@ -456,169 +290,7 @@
         "isList": false
       }
     ],
-    "allocations": [
-      {
-        "name": "Aacquiline Linu Varghese",
-        "institution": "Lbs Institule Of Technology For Women",
-        "internshipInstitution": "National Institute Of Technology Calicut",
-        "mentorName": "Dr. Santosh Kumar Behera",
-        "mentorEmail": "skbehera@nitc.ac.in"
-      },
-      {
-        "name": "Adhila Fathima T.A",
-        "institution": "",
-        "internshipInstitution": "National Institute Of Technology Calicut",
-        "mentorName": "Dr. Jayaraj P B",
-        "mentorEmail": "jayarajpb@nitc.ac.in"
-      },
-      {
-        "name": "Adithya Pramod Menon",
-        "institution": "",
-        "internshipInstitution": "Cochin University Of Science And Technology",
-        "mentorName": "Dr. Santosh Kumar G",
-        "mentorEmail": "san@cusat.ac.in"
-      },
-      {
-        "name": "Alen Mariya P P",
-        "institution": "",
-        "internshipInstitution": "Cochin University Of Science And Technology",
-        "mentorName": "Dr. Jeena K",
-        "mentorEmail": "jeenakk@cusat.ac.in"
-      },
-      {
-        "name": "Ananthakrishnan A S",
-        "institution": "Amrita Vishwa Vidyapeetham",
-        "internshipInstitution": "Amrita Vishwa Vidyapeetham",
-        "mentorName": "Dr. Dhanya M. Dhanalakshmy",
-        "mentorEmail": "md_dhanya@cb.amrita.edu"
-      },
-      {
-        "name": "Anju Mary Anson",
-        "institution": "",
-        "internshipInstitution": "Amrita Vishwa Vidyapeetham",
-        "mentorName": "Dr. Dhanya M. Dhanalakshmy",
-        "mentorEmail": "md_dhanya@cb.amrita.edu"
-      },
-      {
-        "name": "Anurag S Nair",
-        "institution": "",
-        "internshipInstitution": "Amrita Vishwa Vidyapeetham",
-        "mentorName": "Dr. Ritwik M",
-        "mentorEmail": "m_ritwik@cb.amrita.edu"
-      },
-      {
-        "name": "Chackochan Jose",
-        "institution": "",
-        "internshipInstitution": "National Institute Of Technology Calicut",
-        "mentorName": "Dr. Santosh Kumar Behera",
-        "mentorEmail": "skbehera@nitc.ac.in"
-      },
-      {
-        "name": "D R Adithyaa",
-        "institution": "Amrita Vishwa Vidyapeetham",
-        "internshipInstitution": "Amrita Vishwa Vidyapeetham",
-        "mentorName": "Dr. Ritwik M",
-        "mentorEmail": "m_ritwik@cb.amrita.edu"
-      },
-      {
-        "name": "Fidha Naisam",
-        "institution": "",
-        "internshipInstitution": "National Institute Of Technology Calicut",
-        "mentorName": "Dr. Jayaraj P B",
-        "mentorEmail": "san@cusat.ac.in"
-      },
-      {
-        "name": "Ganesh Chandran C",
-        "institution": "",
-        "internshipInstitution": "National Institute Of Technology Calicut",
-        "mentorName": "Dr. Shihabudheen K V",
-        "mentorEmail": "shihabudheen@nitc.ac.in"
-      },
-      {
-        "name": "Jeswin Antony Chungath",
-        "institution": "",
-        "internshipInstitution": "National Institute Of Technology Calicut",
-        "mentorName": "Dr. Sudeep P V",
-        "mentorEmail": "sudeep.pv@nitc.ac.in"
-      },
-      {
-        "name": "Josh Joseph",
-        "institution": "",
-        "internshipInstitution": "Cochin University Of Science And Technology",
-        "mentorName": "Dr. Santosh Kumar G",
-        "mentorEmail": "san@cusat.ac.in"
-      },
-      {
-        "name": "Kavinraj S",
-        "institution": "Amrita Vishwa Vidyapeetham",
-        "internshipInstitution": "Amrita Vishwa Vidyapeetham",
-        "mentorName": "Dr. Ritwik M",
-        "mentorEmail": "m_ritwik@cb.amrita.edu"
-      },
-      {
-        "name": "Kishan D Majithia",
-        "institution": "Tkm College Of Engineering Kollen",
-        "internshipInstitution": "Amrita Vishwa Vidyapeetham",
-        "mentorName": "Dr. Dhanya M. Dhanalakshmy",
-        "mentorEmail": "md_dhanya@cb.amrita.edu"
-      },
-      {
-        "name": "Krishnendu A",
-        "institution": "Samtgitis College Of Engineering",
-        "internshipInstitution": "Cochin University Of Science And Technology",
-        "mentorName": "Dr. Shailesh Sivan",
-        "mentorEmail": "shaileshsivan@cusat.ac.in"
-      },
-      {
-        "name": "Nandana Nair",
-        "institution": "",
-        "internshipInstitution": "National Institute Of Technology Calicut",
-        "mentorName": "Dr. Raju Hazari",
-        "mentorEmail": "rajuhazan@nitc.ac.in"
-      },
-      {
-        "name": "Revathy P S",
-        "institution": "",
-        "internshipInstitution": "National Institute Of Technology Calicut",
-        "mentorName": "Dr. Sudeep P V",
-        "mentorEmail": "sudeep.pv@nitc.ac.in"
-      },
-      {
-        "name": "Richard Sabu",
-        "institution": "",
-        "internshipInstitution": "Cochin University Of Science And Technology",
-        "mentorName": "Dr. Jeena K",
-        "mentorEmail": "jeenakk@cusat.ac.in"
-      },
-      {
-        "name": "Sabharish P V",
-        "institution": "",
-        "internshipInstitution": "Cochin University Of Science And Technology",
-        "mentorName": "Dr. Shailesh Sivan",
-        "mentorEmail": "shaileshsivan@cusat.ac.in"
-      },
-      {
-        "name": "Sneha Paul",
-        "institution": "Jyothi Engineering College Thrissar",
-        "internshipInstitution": "National Institute Of Technology Calicut",
-        "mentorName": "Dr. Shihabudheen K V",
-        "mentorEmail": "shihabudheen@nitc.ac.in"
-      },
-      {
-        "name": "Swathy V",
-        "institution": "Nssi College Of Engineering Palakkad",
-        "internshipInstitution": "Amrita Vishwa Vidyapeetham",
-        "mentorName": "Dr. Bagavathi C",
-        "mentorEmail": "c_bagavathi@cb.amrita.edu"
-      },
-      {
-        "name": "Theertha R",
-        "institution": "Nss College Of Engineering",
-        "internshipInstitution": "Amrita Vishwa Vidyapeetham",
-        "mentorName": "Dr. Bagavathi C",
-        "mentorEmail": "c_bagavathi@cb.amrita.edu"
-      }
-    ]
+    "allocations": []
   },
   
   "_help_contact": "Information displayed in the contact action bar at the bottom of the page.",
