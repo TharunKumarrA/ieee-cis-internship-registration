@@ -182,7 +182,7 @@
       },
       {
         "name": "Total Program Intake",
-        "limit": "Limited to TBD students"
+        "limit": "Limited to 30 students"
       }
     ],
     "ineligibleTitle": "Ineligibility Factors",
@@ -239,13 +239,13 @@
     "timelineTitle": "Program Timeline",
     "timeline": [
       {
-        "date": "TBD 2026",
+        "date": "30 - April - 2026",
         "title": "Applications Open",
         "description": "Online applications for the summer internship begin through the IEEE portal.",
         "isActive": false
       },
       {
-        "date": "TBD 2026",
+        "date": "30 - May - 2026",
         "title": "Application Deadline",
         "description": "Last date to submit your application and supporting documents.",
         "isActive": false
